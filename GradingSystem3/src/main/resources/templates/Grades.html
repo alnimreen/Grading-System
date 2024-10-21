@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Student Grades</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Course Name</th>
+    <th>Grade</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="grade : ${grades}">
+    <td th:text="${grade.course.courseName}"></td>
+    <td th:text="${grade.getGrade()}"></td>
+  </tr>
+  </tbody>
+</table>
+<a href="/">logout</a>
+
+</body>
+</html>
